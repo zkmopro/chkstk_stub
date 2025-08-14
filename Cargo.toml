@@ -2,6 +2,15 @@
 name = "chkstk_stub"
 version = "0.1.0"
 edition = "2021"
+description = "A stub for the chkstk function on iOS"
+license = "MIT"
+repository = "https://github.com/zkmopro/chkstk_stub"
+homepage = "https://github.com/zkmopro/chkstk_stub"
+keywords = ["ios", "apple", "chkstk"]
+
+[lib]
+name = "chkstk_stub"
+path = "src/lib.rs"
 
 [dependencies]
 cc = "1.2"
