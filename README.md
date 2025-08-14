@@ -46,10 +46,16 @@ The `build.rs` file in this crate:
 chkstk_stub = { version = "0.1.0" }
 ```
 
+In `build.rs`:
+
+```rs
+chkstk_stub::build();
+```
+
 ## Notes & Warnings
 
-- This is **not a full implementation** of `__chkstk_darwin` — it’s a no-op.
+-   This is **not a full implementation** of `__chkstk_darwin` — it’s a no-op.
 
-- In most cases, stack probing is only needed for large stack frames; skipping it may be safe for your use case, but **you should verify**.
+-   In most cases, stack probing is only needed for large stack frames; skipping it may be safe for your use case, but **you should verify**.
 
-- This is intended for **linker unblocking** in controlled build environments, not as a general-purpose solution for production code.
+-   This is intended for **linker unblocking** in controlled build environments, not as a general-purpose solution for production code.
